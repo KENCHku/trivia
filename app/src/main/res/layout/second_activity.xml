@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/doorbg"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tv_vhod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:layout_marginTop="60dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_vhod"
+        app:layout_constraintVertical_bias="0.373" />
+
+    <TextView
+        android:id="@+id/tv_warn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log in or sign up. "
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_welcome" />
+
+
+    <EditText
+        android:paddingHorizontal="20dp"
+        android:hint="Input email"
+        android:textColor="@color/black"
+        android:paddingVertical="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="18sp"
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:padding="12dp"
+        android:background="@drawable/border"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/tv_warn"
+        tools:layout_editor_absoluteX="0dp" />
+    <EditText
+        android:paddingHorizontal="20dp"
+        android:hint="Input password"
+        android:textColor="@color/black"
+        android:inputType="textPassword"
+        android:paddingVertical="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="18sp"
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:background="@drawable/border"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/et_email"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:paddingHorizontal="20dp"
+        android:text="Enter"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:paddingVertical="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:backgroundTint="@color/gray"
+        app:cornerRadius="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/et_password"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_forgot"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/white"
+        android:text="Forget password?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

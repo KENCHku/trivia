@@ -29,8 +29,6 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_activity);
 
-        Intent intent = getIntent();
-        String value = intent.getStringExtra("key"); //if it's a string you stored.
 
         edit_text_email = findViewById(R.id.et_email);
         edit_text_password = findViewById(R.id.et_password);

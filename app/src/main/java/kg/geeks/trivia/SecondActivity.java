@@ -23,6 +23,7 @@ public class SecondActivity extends AppCompatActivity {
 
     TextView tv_login;
     TextView tv_warn;
+    TextView tv_click_here;
     TextView tv_forgetPassword;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +34,10 @@ public class SecondActivity extends AppCompatActivity {
         edit_text_email = findViewById(R.id.et_email);
         edit_text_password = findViewById(R.id.et_password);
         btn_login = findViewById(R.id.btn_login);
-        tv_login=findViewById(R.id.tv_vhod);
-        tv_warn=findViewById(R.id.tv_warn);
-        tv_forgetPassword=findViewById(R.id.tv_forgot);
-
+        tv_login = findViewById(R.id.tv_vhod);
+        tv_warn = findViewById(R.id.tv_warn);
+        tv_click_here = findViewById(R.id.tv_clickhere);
+        tv_forgetPassword = findViewById(R.id.tv_forgot);
 
 
         edit_text_email.addTextChangedListener(loginTextWatcher);
@@ -60,12 +61,22 @@ public class SecondActivity extends AppCompatActivity {
     public void validate(String etEmail, String etPassword) {
         if (etEmail.equals("admin") && etPassword.equals("admin")) {
             Toast.makeText(this, "Successfully log in!", Toast.LENGTH_SHORT).show();
+
+
             tv_login.setVisibility(View.GONE);
             tv_forgetPassword.setVisibility(View.GONE);
+            tv_click_here.setVisibility(View.GONE);
             tv_warn.setVisibility(View.GONE);
             edit_text_email.setVisibility(View.GONE);
             edit_text_password.setVisibility(View.GONE);
             btn_login.setVisibility(View.GONE);
+//            tv_login.animate().alpha(0);
+//            btn_login.animate().alpha(0);
+//            tv_forgetPassword.animate().alpha(0);
+//            tv_click_here.animate().alpha(0);
+//            tv_warn.animate().alpha(0);
+//            edit_text_email.animate().alpha(0);
+//            edit_text_password.animate().alpha(0);
 
             //btn_login.setBackgroundColor(ContextCompat.getColor(SecondActivity.this, R.color.yellow));
         } else {
